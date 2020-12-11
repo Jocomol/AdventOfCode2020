@@ -8,23 +8,15 @@ length = len(lines)
 line_index = 0
 letter_index = 0
 tree_counter = 0
-line_length = len(lines[0])
 
-while True:
+while line_index < len(lines):
+    if lines[line_index][letter_index % 31] == "#":
+        tree_counter += 1
     letter_index += 3
     line_index += 1
-    if letter_index >= line_length:
-        letter_index -= line_length
-    if line_index >= length:
-        print("Encountered Trees: " + str(tree_counter))
-        exit(0)
-    try:
-        if lines[line_index][letter_index] == "#":
-            tree_counter += 1
-    except(IndexError):
-        print(length, line_index, letter_index, tree_counter, line_length)
 
 
+print("Encountered Trees: " + str(tree_counter))
 
 
 

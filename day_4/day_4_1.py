@@ -9,13 +9,17 @@ byr = iyr = eyr = hgt = hcl = ecl = pid = False
 
 for line in lines:
     if line == '\n':
+        print("---")
         if byr == iyr == eyr == hgt == hcl == ecl == pid is True:
             valid_counter += 1
+            print("VALID")
         byr = iyr = eyr = hgt = hcl = ecl = pid = False
+        print("---")
     else:
         line_array = line.split(" ")
         for entry in line_array:
             key = entry.split(":")[0]
+            print(key)
             if key == "byr":
                 byr = True
             if key == "iyr":
