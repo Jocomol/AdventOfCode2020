@@ -34,4 +34,11 @@ for line in lines:
                 ecl = True
             if key == "pid":
                 pid = True
+
+print("---")
+if byr == iyr == eyr == hgt == hcl == ecl == pid is True:
+    valid_counter += 1
+    print("VALID")
+byr = iyr = eyr = hgt = hcl = ecl = pid = False
+print("---")
 print("valid Passports: " + str(valid_counter))

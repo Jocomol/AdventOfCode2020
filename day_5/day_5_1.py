@@ -23,9 +23,9 @@ def id_from_string(id_string, upper_limit):
 
     if lower_limit == upper_limit:
         return lower_limit
-    elif id_string[len(id_string) - 1] == "L" or id_string[len(id_string) - 1] == "B":
+    elif id_string[len(id_string) - 1] == "L" or id_string[len(id_string) - 1] == "F":
         return lower_limit
-    elif id_string[len(id_string) - 1] == "R" or id_string[len(id_string) - 1] == "F":
+    elif id_string[len(id_string) - 1] == "R" or id_string[len(id_string) - 1] == "B":
         return upper_limit
     else:
         return False
